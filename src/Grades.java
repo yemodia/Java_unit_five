@@ -16,14 +16,19 @@ public class Grades
         //input grades for Mary
         student1.inputGrades();
         //print Mary
+        student1.printName();
         //use getAverage to calculate & print average for Mary
+        student2.getAverage();
 
 
         System.out.println();
 
         //input grades for Mike
+        student2.inputGrades();
         //print Mike
+        student2.printName();
         //use getAverage to calculate & print average for Mike
+        student2.getAverage();
 
     }
 }
