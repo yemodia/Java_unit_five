@@ -55,6 +55,7 @@ public class Student
         return (this.score1 + this.score2) / 2;
     }
         //add body of getAverage
+    //
 
 
     //-----------------------------------------------
