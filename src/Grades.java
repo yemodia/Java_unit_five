@@ -21,14 +21,15 @@ public class Grades
         student2.getAverage();
 
 
-        System.out.println();
+        System.out.println(student2.getAverage());
 
         //input grades for Mike
         student2.inputGrades();
         //print Mike
         student2.printName();
         //use getAverage to calculate & print average for Mike
-        student2.getAverage();
+
+        System.out.println(student2.getAverage());
 
     }
 }
