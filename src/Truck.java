@@ -17,5 +17,57 @@ public class Truck {
         this.fuel = fuel;
     }
 
+    public double getOdometer(){
+        return odometer;
+    }
+
+    public double getCAPACITY() {
+        return CAPACITY;
+    }
+
+    public double getFuel() {
+        return fuel;
+    }
+
+    public double getMpg() {
+        return mpg;
+    }
+
+    public String getTruckID() {
+        return truckID;
+    }
+
+    public void setMpg(double mpg) {
+        this.mpg = mpg;
+    }
+
+    public boolean enoughFuel(double miles){
+       double distance = fuel * mpg;
+        if (miles > distance){
+            return false;
+        }
+        else return true;
+    }
+
+    public String drive(double miles2){
+        String finalOutput = "";
+        if (enoughFuel(miles2) == true ){
+            odometer += miles2;
+            fuel -= (miles2 / mpg);
+            finalOutput += "Success";
+        }
+        else if (enoughFuel(miles2) == false)
+        finalOutput += "does not have enough fuel to drive" + odometer + "miles";
+           return finalOutput;
+
+    }
+
+    public void fill(){
+        double fuelNeed = CAPACITY - fuel;
+        if(fuel < CAPACITY)
+            fuel += fuelNeed;
+        totalFuel += fuel;
+
+    }
 
 }
