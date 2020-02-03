@@ -67,7 +67,25 @@ public class Truck {
         if(fuel < CAPACITY)
             fuel += fuelNeed;
         totalFuel += fuel;
+    }
 
+    public String fill(double gallons){
+        if (gallons + fuel <= CAPACITY){
+            fuel += gallons;
+            totalFuel += gallons;
+            return "Success";
+        }
+        else
+            return "Gallons exceeds tank capacity";
+
+    }
+
+    public static double getTotalFuel(){
+        return totalFuel;
+    }
+
+    public String toString(){
+        return "Truck:" + truckID + "\n Odometer:" + odometer + "\n Miles per Gallon: "+ mpg + "\nFuel:" + fuel ;
     }
 
 }
