@@ -52,13 +52,13 @@ public class Truck {
 
     public String drive(double miles2){
         String finalOutput = "";
-        if (enoughFuel(miles2) == true ){
+        if (enoughFuel(miles2)){
             odometer += miles2;
             fuel -= (miles2 / mpg);
             finalOutput += "Success";
         }
-        else if (enoughFuel(miles2) == false)
-        finalOutput += "Truck " + truckID + " does not have enough fuel to drive " + odometer + " miles";
+        else
+        finalOutput += "Truck " + truckID + " does not have enough fuel to drive " + miles2 + " miles.";
            return finalOutput;
 
     }
@@ -86,7 +86,7 @@ public class Truck {
     }
 
     public String toString(){
-        return "Truck: " + truckID + "\n Odometer: " + odometer + "\n Miles Per Gallon: "+ mpg + "\nFuel: " + fuel ;
+        return "Truck: " + truckID + "\nOdometer: " + odometer + "\nMiles Per Gallon: "+ mpg + "\nFuel: " + fuel ;
     }
 
 }
