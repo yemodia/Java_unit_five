@@ -167,12 +167,19 @@ public class Review {
     int start = 0;
     int end;
 
-    String newFile = removePunctuation(fileName);
+    String newFile = textToString(fileName);
 
-    while (start < newFile.length()){
-      if
-
+    while(newFile.indexOf(" ", start+1) !=  -1){
+      end = newFile.indexOf(" ", start);
+      double totalSent = sentimentVal(removePunctuation(newFile.substring(start,end)));
+      start = end;
     }
+  return sentimentVal(newFile);
   }
+
+  public static int starRating(String fileName){
+      double totalSentiment = sentimentVal()
+  }
+
 
 }
